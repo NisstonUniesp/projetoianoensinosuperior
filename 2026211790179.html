@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdStrike Falcon - Inteligência Artificial</title>
+
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #0b0f14;
+        color: #e8edf2;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #111820, #1c252e);
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 3px solid #e31937;
+    }
+
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    header p {
+        font-size: 18px;
+        color: #b9c2ca;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    nav {
+        background-color: #121820;
+        padding: 15px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #e31937;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    section {
+        background-color: #11171e;
+        margin-bottom: 30px;
+        padding: 35px;
+        border-radius: 10px;
+        border: 1px solid #28313a;
+    }
+
+    h2 {
+        color: #e31937;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    h3 {
+        color: #ffffff;
+        margin: 20px 0 10px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        color: #cbd3da;
+    }
+
+    ul {
+        margin-left: 25px;
+        color: #cbd3da;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .destaque {
+        background-color: #1b222a;
+        border-left: 5px solid #e31937;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .card {
+        background-color: #181f27;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #303943;
+    }
+
+    .card h3 {
+        color: #e31937;
+    }
+
+    .fluxo {
+        text-align: center;
+        margin-top: 25px;
+        padding: 25px;
+        background-color: #181f27;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .etapa {
+        display: inline-block;
+        background-color: #252e37;
+        padding: 15px;
+        margin: 8px;
+        border-radius: 8px;
+        border: 1px solid #e31937;
+    }
+
+    .seta {
+        color: #e31937;
+        font-size: 22px;
+    }
+
+    footer {
+        background-color: #080b0f;
+        text-align: center;
+        padding: 30px 20px;
+        color: #89939d;
+        border-top: 1px solid #28313a;
+    }
+
+    .fonte {
+        font-size: 14px;
+        color: #89939d;
+        margin-top: 10px;
+    }
+
+    @media (max-width: 700px) {
+        header h1 {
+            font-size: 32px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        section {
+            padding: 25px 20px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>CrowdStrike Falcon</h1>
+    <p>
+        Inteligência Artificial e Machine Learning aplicados à
+        cibersegurança moderna
+    </p>
+</header>
+
+<nav>
+    <a href="#historia">História</a>
+    <a href="#funcionamento">Funcionamento</a>
+    <a href="#ia">Inteligência Artificial</a>
+    <a href="#edr">EDR</a>
+    <a href="#ataques">Detecção</a>
+    <a href="#2024">Incidente de 2024</a>
+</nav>
+
+<main>
+
+    <section id="historia">
+        <h2>1. História da CrowdStrike e do Falcon</h2>
+
+        <p>
+            A CrowdStrike foi fundada em 2011 por George Kurtz,
+            Dmitri Alperovitch e Gregg Marston com o objetivo de
+            desenvolver uma nova abordagem para a segurança cibernética.
+        </p>
+
+        <p>
+            A empresa buscava substituir soluções tradicionais de
+            segurança, que dependiam de grandes infraestruturas locais,
+            por uma arquitetura baseada em nuvem.
+        </p>
+
+        <p>
+            Em 2013, a CrowdStrike lançou a plataforma Falcon e o
+            Falcon Sensor. A solução passou a utilizar um agente leve
+            instalado nos dispositivos, enquanto grande parte da análise
+            e gerenciamento era realizada na nuvem.
+        </p>
+
+        <div class="destaque">
+            <strong>Ideia principal:</strong>
+            o Falcon combina telemetria de endpoints, inteligência
+            artificial, machine learning e análise comportamental para
+            identificar ameaças de forma rápida.
+        </div>
+    </section>
+
+    <section id="funcionamento">
+        <h2>2. Como funciona o CrowdStrike Falcon?</h2>
+
+        <p>
+            O Falcon funciona através de uma arquitetura na qual um
+            sensor é instalado nos endpoints, como computadores e
+            servidores. Esse sensor coleta informações sobre as
+            atividades realizadas no sistema.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Sensor</h3>
+                <p>
+                    Monitora processos, arquivos, conexões de rede,
+                    usuários e outras atividades do sistema operacional.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Nuvem</h3>
+                <p>
+                    Os dados coletados são analisados pela infraestrutura
+                    de nuvem da plataforma Falcon.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>IA e ML</h3>
+                <p>
+                    Modelos de inteligência artificial e machine learning
+                    ajudam a identificar comportamentos suspeitos.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Resposta</h3>
+                <p>
+                    Quando uma ameaça é identificada, a plataforma pode
+                    realizar ações de contenção e resposta.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="fluxo">
+            <div class="etapa">Endpoint</div>
+            <span class="seta">→</span>
+            <div class="etapa">Falcon Sensor</div>
+            <span class="seta">→</span>
+            <div class="etapa">Nuvem</div>
+            <span class="seta">→</span>
+            <div class="etapa">IA / Machine Learning</div>
+            <span class="seta">→</span>
+            <div class="etapa">Detecção e Resposta</div>
+        </div>
+    </section>
+
+    <section id="ia">
+        <h2>3. Inteligência Artificial no Falcon</h2>
+
+        <p>
+            A inteligência artificial é utilizada pela plataforma para
+            analisar grandes quantidades de eventos de segurança e
+            identificar padrões que podem indicar uma ameaça.
+        </p>
+
+        <p>
+            Em vez de depender somente de uma lista fixa de vírus
+            conhecidos, sistemas modernos de segurança podem analisar
+            o comportamento de programas e processos.
+        </p>
+
+        <h3>Machine Learning</h3>
+
+        <p>
+            O machine learning permite criar modelos capazes de
+            identificar padrões associados a atividades maliciosas.
+            Dessa maneira, a análise pode considerar características
+            do comportamento de um processo e não apenas sua assinatura.
+        </p>
+
+        <h3>Análise comportamental</h3>
+
+        <p>
+            Um programa aparentemente legítimo pode apresentar
+            comportamentos anormais. Por exemplo, um processo pode
+            tentar modificar arquivos em grande quantidade, executar
+            comandos suspeitos ou estabelecer conexões incomuns.
+        </p>
+
+        <div class="destaque">
+            <strong>Exemplo:</strong>
+            imagine um computador no qual um processo começa
+            repentinamente a alterar centenas de arquivos e realizar
+            atividades características de ransomware. A análise
+            comportamental pode identificar essa sequência como
+            suspeita mesmo que o arquivo específico não esteja em uma
+            lista tradicional de malware.
+        </div>
+    </section>
+
+    <section id="edr">
+        <h2>4. Falcon e EDR</h2>
+
+        <p>
+            O Falcon é associado ao conceito de EDR
+            (<strong>Endpoint Detection and Response</strong>).
+            O objetivo de uma solução EDR é monitorar os endpoints,
+            detectar comportamentos suspeitos e fornecer mecanismos
+            para investigação e resposta.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Detection</h3>
+                <p>
+                    Identificação de comportamentos e eventos que podem
+                    representar ameaças.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Investigation</h3>
+                <p>
+                    Análise dos eventos para entender como o ataque
+                    aconteceu e quais sistemas foram afetados.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Response</h3>
+                <p>
+                    Ações para conter ou remediar uma ameaça detectada.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="ataques">
+        <h2>5. O que a IA pode detectar?</h2>
+
+        <p>
+            A combinação de telemetria, inteligência artificial,
+            machine learning e análise comportamental pode ajudar na
+            identificação de diferentes categorias de ataques.
+        </p>
+
+        <ul>
+            <li>Ransomware;</li>
+            <li>Malware tradicional;</li>
+            <li>Ataques sem arquivo (fileless);</li>
+            <li>Execução de processos suspeitos;</li>
+            <li>Movimentação lateral;</li>
+            <li>Comportamentos anômalos;</li>
+            <li>Atividades relacionadas a roubo de credenciais;</li>
+            <li>Comunicações suspeitas com infraestrutura externa.</li>
+        </ul>
+
+        <h3>Malware tradicional x análise comportamental</h3>
+
+        <p>
+            Em uma solução tradicional, uma técnica comum é comparar
+            arquivos com assinaturas conhecidas. Essa abordagem continua
+            sendo importante, mas possui limitações contra ameaças novas
+            ou modificadas.
+        </p>
+
+        <p>
+            A análise comportamental procura observar
+            <strong>o que o programa está fazendo</strong>.
+            Isso permite identificar comportamentos potencialmente
+            maliciosos mesmo quando não existe uma assinatura específica
+            para aquele arquivo.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Inteligência centralizada na nuvem</h2>
+
+        <p>
+            Um dos conceitos fundamentais do Falcon é utilizar uma
+            infraestrutura centralizada em nuvem para gerenciamento,
+            análise e correlação de eventos.
+        </p>
+
+        <p>
+            Isso permite que informações provenientes de diferentes
+            endpoints sejam analisadas em conjunto, ajudando a identificar
+            padrões e campanhas de ataque que poderiam passar despercebidos
+            quando cada computador fosse analisado isoladamente.
+        </p>
+
+        <div class="destaque">
+            <strong>Correlação:</strong>
+            eventos aparentemente isolados podem ganhar significado
+            quando analisados em conjunto. A correlação de grandes
+            volumes de telemetria é uma das áreas em que automação,
+            machine learning e análise em nuvem podem ser especialmente
+            úteis.
+        </div>
+    </section>
+
+    <section id="2024">
+        <h2>7. O incidente de julho de 2024</h2>
+
+        <p>
+            Em julho de 2024, uma atualização de conteúdo relacionada
+            ao Falcon Sensor para Windows provocou uma falha que fez
+            com que muitos computadores apresentassem a conhecida
+            tela azul do Windows (BSOD).
+        </p>
+
+        <p>
+            O incidente afetou organizações em diversos setores e
+            mostrou como uma ferramenta de segurança instalada em
+            milhões de endpoints pode ter um impacto operacional muito
+            grande quando ocorre um problema em uma atualização.
+        </p>
+
+        <div class="destaque">
+            <strong>Importante:</strong>
+            o incidente de 2024 não foi causado por uma IA "atacando"
+            computadores. O problema esteve relacionado a uma atualização
+            de conteúdo do Falcon Sensor para Windows que continha dados
+            problemáticos para o sensor.
+        </div>
+
+        <p>
+            O caso também demonstrou um dos desafios de soluções de
+            segurança modernas: quanto mais profundamente um software
+            de proteção interage com o sistema operacional, maior pode
+            ser o impacto de uma falha nesse componente.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Vantagens da abordagem baseada em IA</h2>
+
+        <ul>
+            <li>
+                <strong>Velocidade:</strong> grandes volumes de eventos
+                podem ser analisados automaticamente.
+            </li>
+
+            <li>
+                <strong>Escalabilidade:</strong> a arquitetura em nuvem
+                permite trabalhar com grandes quantidades de endpoints.
+            </li>
+
+            <li>
+                <strong>Análise comportamental:</strong> permite procurar
+                comportamentos suspeitos e não somente assinaturas.
+            </li>
+
+            <li>
+                <strong>Automação:</strong> determinadas ações de
+                investigação e resposta podem ser automatizadas.
+            </li>
+
+            <li>
+                <strong>Correlação:</strong> diferentes eventos podem
+                ser relacionados para construir uma visão mais completa
+                de um incidente.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Limitações e desafios</h2>
+
+        <p>
+            Apesar das vantagens, a inteligência artificial não torna
+            um sistema de segurança completamente invulnerável.
+        </p>
+
+        <ul>
+            <li>
+                Modelos podem apresentar falsos positivos.
+            </li>
+
+            <li>
+                Atacantes podem tentar modificar seus comportamentos
+                para evitar mecanismos de detecção.
+            </li>
+
+            <li>
+                A qualidade da detecção depende dos dados e modelos
+                utilizados.
+            </li>
+
+            <li>
+                Atualizações de componentes de segurança precisam ser
+                cuidadosamente testadas.
+            </li>
+
+            <li>
+                A segurança continua dependendo de profissionais,
+                processos e outras camadas de proteção.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>10. Conclusão</h2>
+
+        <p>
+            A CrowdStrike Falcon representa uma abordagem moderna para
+            segurança de endpoints, combinando sensores instalados nos
+            dispositivos com processamento em nuvem, inteligência
+            artificial, machine learning e análise comportamental.
+        </p>
+
+        <p>
+            A principal diferença em relação a uma abordagem baseada
+            exclusivamente em assinaturas é a capacidade de observar
+            atividades e comportamentos para identificar possíveis
+            ameaças.
+        </p>
+
+        <p>
+            Dessa forma, a IA funciona como uma importante camada de
+            apoio à detecção e resposta a incidentes, ajudando equipes
+            de segurança a analisar grandes volumes de informações e
+            reagir rapidamente a ameaças cibernéticas.
+        </p>
+    </section>
+
+    <section>
+        <h2>11. Fontes para pesquisa</h2>
+
+        <ul>
+            <li>
+                CrowdStrike — História e informações institucionais.
+            </li>
+
+            <li>
+                CrowdStrike Falcon — documentação e informações sobre
+                a plataforma.
+            </li>
+
+            <li>
+                Dell — informações sobre a plataforma CrowdStrike Falcon.
+            </li>
+
+            <li>
+                Relatórios e comunicados oficiais relacionados ao
+                incidente de julho de 2024.
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        Trabalho sobre Inteligência Artificial aplicada à
+        Cibersegurança
+    </p>
+
+    <p class="fonte">
+        CrowdStrike Falcon • IA • Machine Learning • EDR
+    </p>
+</footer>
+```
+
+</body>
+</html>
