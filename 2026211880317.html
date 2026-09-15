@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek no Ensino Superior</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #eef2ff;
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e0e7ff;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin: 1.5rem 0 0.75rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card ul {
+      margin-left: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .alert {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .alert strong {
+      color: #b91c1c;
+    }
+
+    .tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .tip strong {
+      color: #15803d;
+    }
+
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #a5b4fc;
+    }
+
+    .creditos {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #334155;
+      font-size: 1rem;
+      color: #e2e8f0;
+    }
+
+    .creditos strong {
+      color: #a5b4fc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header {
+        padding: 2.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DeepSeek no Ensino Superior</h1>
+    <p>Como a inteligência artificial pode apoiar seus estudos, pesquisas e produção acadêmica — com responsabilidade e pensamento crítico.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#intro">Introdução</a></li>
+      <li><a href="#aplicabilidades">Aplicabilidades</a></li>
+      <li><a href="#areas">Por Área</a></li>
+      <li><a href="#boas-praticas">Boas Práticas</a></li>
+      <li><a href="#limitacoes">Limitações</a></li>
+      <li><a href="#etica">Ética</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="intro">
+      <h2>Introdução</h2>
+      <p>O <strong>DeepSeek</strong> é um modelo de inteligência artificial de linguagem desenvolvido para compreender e gerar textos, responder perguntas e auxiliar em tarefas cognitivas. No ensino superior, ele pode se tornar um <strong>assistente de estudos</strong> capaz de complementar a formação acadêmica, desde que usado com senso crítico e dentro das normas institucionais.</p>
+      <p>Diferente de uma simples ferramenta de busca, o DeepSeek pode dialogar, explicar conceitos, sugerir estruturas e ajudar a organizar ideias. No entanto, <strong>não substitui o professor, a leitura de fontes originais nem o esforço intelectual do estudante</strong>.</p>
+    </section>
+
+    <section id="aplicabilidades">
+      <h2>Principais Aplicabilidades nos Estudos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>📚 Compreensão de Conteúdos</h3>
+          <ul>
+            <li>Explicação de conceitos complexos em linguagem mais simples.</li>
+            <li>Resumos e mapas mentais de textos e artigos.</li>
+            <li>Comparação entre teorias, autores e abordagens.</li>
+            <li>Geração de exemplos práticos para fixação.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>✍️ Produção Acadêmica</h3>
+          <ul>
+            <li>Apoio na estruturação de trabalhos e TCCs.</li>
+            <li>Revisão gramatical e sugestões de clareza.</li>
+            <li>Brainstorming de tópicos e argumentos.</li>
+            <li>Criação de roteiros para seminários e apresentações.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🔬 Pesquisa e Metodologia</h3>
+          <ul>
+            <li>Auxílio na formulação de perguntas de pesquisa.</li>
+            <li>Sugestão de metodologias e instrumentos.</li>
+            <li>Organização de referências e fichamentos.</li>
+            <li>Interpretação inicial de dados e resultados.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>💻 Programação e Exatas</h3>
+          <ul>
+            <li>Explicação de algoritmos e lógica de programação.</li>
+            <li>Depuração de código e sugestões de melhorias.</li>
+            <li>Resolução comentada de exercícios de matemática e física.</li>
+            <li>Apoio em estatística e análise de dados.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🌎 Idiomas e Intercâmbio</h3>
+          <ul>
+            <li>Tradução e adaptação de textos acadêmicos.</li>
+            <li>Prática de conversação e escrita em outros idiomas.</li>
+            <li>Preparação para exames de proficiência.</li>
+            <li>Compreensão de artigos internacionais.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>⏱️ Organização e Produtividade</h3>
+          <ul>
+            <li>Criação de cronogramas de estudo personalizados.</li>
+            <li>Divisão de tarefas e metas semanais.</li>
+            <li>Técnicas de memorização e revisão espaçada.</li>
+            <li>Simulação de perguntas para autoavaliação.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <h2>Exemplos por Área do Conhecimento</h2>
+
+      <h3>Ciências Humanas e Sociais</h3>
+      <p>Análise de discursos, resumo de obras filosóficas, comparação de correntes sociológicas, elaboração de roteiros de entrevista e revisão de textos dissertativos.</p>
+
+      <h3>Ciências Exatas e Engenharias</h3>
+      <p>Resolução passo a passo de problemas, explicação de teoremas, apoio em projetos de código, modelagem matemática e interpretação de gráficos.</p>
+
+      <h3>Ciências Biológicas e Saúde</h3>
+      <p>Revisão de fisiologia, explicação de processos bioquímicos, criação de flashcards para anatomia, resumo de artigos científicos e preparação para provas de residência.</p>
+
+      <h3>Ciências Sociais Aplicadas</h3>
+      <p>Estudos de caso, análise de mercado, apoio em planos de negócios, revisão de normas técnicas e elaboração de relatórios.</p>
+    </section>
+
+    <section id="boas-praticas">
+      <h2>Boas Práticas de Uso</h2>
+      <div class="tip">
+        <p><strong>Use como ponto de partida, não como resposta final.</strong> Sempre confirme informações em fontes confiáveis e consulte seu professor ou orientador.</p>
+      </div>
+      <ul>
+        <li><strong>Cite as fontes originais:</strong> o DeepSeek pode indicar caminhos, mas você deve ler e citar os autores diretamente.</li>
+        <li><strong>Verifique fatos e referências:</strong> modelos de IA podem gerar informações imprecisas ou inventadas.</li>
+        <li><strong>Adapte a linguagem:</strong> use as sugestões como base e reescreva com suas próprias palavras.</li>
+        <li><strong>Respeite as regras da instituição:</strong> algumas avaliações proíbem o uso de IA. Informe-se antes.</li>
+        <li><strong>Proteja dados sensíveis:</strong> não insira informações pessoais, confidenciais ou de terceiros.</li>
+      </ul>
+    </section>
+
+    <section id="limitacoes">
+      <h2>Limitações e Cuidados</h2>
+      <div class="alert">
+        <p><strong>Atenção:</strong> O DeepSeek não é uma fonte acadêmica primária. Ele pode cometer erros, inventar referências e reproduzir vieses. A responsabilidade final pelo conteúdo é sempre do estudante.</p>
+      </div>
+      <ul>
+        <li>Não possui consciência, intenção ou responsabilidade ética.</li>
+        <li>Pode apresentar informações desatualizadas ou incorretas.</li>
+        <li>Não substitui a experiência de laboratório, estágio ou prática profissional.</li>
+        <li>Não garante originalidade nem detecta plágio de forma definitiva.</li>
+        <li>O uso indiscriminado pode prejudicar o desenvolvimento do pensamento crítico.</li>
+      </ul>
+    </section>
+
+    <section id="etica">
+      <h2>Ética e Integridade Acadêmica</h2>
+      <p>O uso de inteligência artificial no ensino superior deve ser transparente e responsável. Algumas diretrizes importantes:</p>
+      <ul>
+        <li>Declare o uso de IA quando solicitado pela instituição.</li>
+        <li>Não apresente textos gerados como se fossem integralmente seus.</li>
+        <li>Use a ferramenta para aprender, não para evitar o aprendizado.</li>
+        <li>Respeite direitos autorais e licenças de conteúdo.</li>
+        <li>Mantenha o diálogo com professores e colegas sobre usos permitidos.</li>
+      </ul>
+    </section>
+
+    <section id="conclusao">
+      <h2>Conclusão</h2>
+      <p>O DeepSeek pode ser um aliado valioso no ensino superior quando utilizado como <strong>ferramenta de apoio</strong> à compreensão, organização e produção acadêmica. Seu potencial é ampliar o acesso à informação e personalizar o estudo, mas seu uso exige <strong>critério, ética e responsabilidade</strong>. O centro do processo de aprendizagem continua sendo o estudante, com sua curiosidade, disciplina e pensamento crítico.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Página educativa sobre o uso do DeepSeek no ensino superior. As informações aqui apresentadas são de caráter geral e não substituem orientações institucionais.</p>
+    <p>Produzido com HTML e CSS — sem fins comerciais.</p>
+    
+    <!-- CRÉDITOS DO AUTOR -->
+    <div class="creditos">
+      <p>Criado por: <strong>Guilhrme Mayr</strong></p>
+      <p>Matrícula: <strong>2026211880317</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
