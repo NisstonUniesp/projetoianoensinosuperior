@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Gemini - A Era da IA Multimodal</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1015;
+            color: #e3e5e8;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: rgba(15, 16, 21, 0.9);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #232733;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #4285f4, #9b51e0, #e91e63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #a0a5b5;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1b2234 0%, #0f1015 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #4285f4, #d9657b, #9b51e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #a0a5b5;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #4285f4, #9b51e0);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Seção de Recursos */
+        .features {
+            padding: 80px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #181a20;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #232733;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4285f4;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #8ab4f8;
+        }
+
+        .card p {
+            color: #a0a5b5;
+            font-size: 0.95rem;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #232733;
+            color: #6c727f;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header>
+        <div class="logo">Google Gemini</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#recursos">Recursos</a>
+            <a href="https://gemini.google.com" target="_blank">Testar Agora</a>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="hero" id="sobre">
+        <h1>Conheça o Google Gemini</h1>
+        <p>A inteligência artificial mais avançada e capaz do Google. Desenvolvida para ser nativamente multimodal, compreendendo texto, código, imagens, áudios e vídeos com facilidade.</p>
+        <a href="https://gemini.google.com" target="_blank" class="btn">Experimente o Gemini</a>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="features" id="recursos">
+        <h2>Principais Recursos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Nativamente Multimodal</h3>
+                <p>Projetado desde o início para raciocinar sobre diferentes tipos de informação: texto, imagens, áudio e vídeo de forma simultânea.</p>
+            </div>
+            <div class="card">
+                <h3>Raciocínio Avançado</h3>
+                <p>Capacidade de analisar grandes volumes de dados complexos, extrair insights e resolver problemas lógicos avançados rapidamente.</p>
+            </div>
+            <div class="card">
+                <h3>Geração de Código</h3>
+                <p>Compreende, explica e gera código de alta qualidade em diversas linguagens de programação, como Python, Java, C++ e JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3>Integração ao Ecossistema</h3>
+                <p>Conecta-se nativamente às ferramentas do Google Workspace, auxiliando na produtividade do dia a dia no Gmail, Docs e mais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Página demonstrativa criada com HTML & CSS. O Google Gemini é uma marca registrada da Google LLC.</p>
+    </footer>
+
+</body>
+</html>
