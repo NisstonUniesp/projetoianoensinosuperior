@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prazer, eu sou o Claude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Cores e fontes ===== */
+    :root {
+      --fundo: #E8EEF7;
+      --tinta: #1B2A4A;
+      --suave: #52607A;
+      --teal: #0F7C7A;
+      --balao: #FFFFFF;
+      --manteiga: #F2C94C;
+      --titulo: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+      --texto: "Literata", Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--fundo);
+      color: var(--tinta);
+      font-family: var(--texto);
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    .pagina {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    /* ===== Topo em formato de conversa ===== */
+    .conversa {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 4rem;
+    }
+
+    .msg {
+      max-width: 85%;
+      padding: 1rem 1.25rem;
+      border-radius: 1.25rem;
+      font-family: var(--titulo);
+      opacity: 0;
+      animation: aparecer 0.4s ease forwards;
+    }
+
+    .msg.voce {
+      align-self: flex-end;
+      background: var(--tinta);
+      color: #fff;
+      border-bottom-right-radius: 0.3rem;
+    }
+
+    .msg.claude {
+      align-self: flex-start;
+      background: var(--balao);
+      border-bottom-left-radius: 0.3rem;
+    }
+
+    .msg.grande {
+      font-size: clamp(2.2rem, 7vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      padding: 1.5rem 1.75rem;
+    }
+
+    .msg:nth-child(2) { animation-delay: 0.5s; }
+    .msg:nth-child(3) { animation-delay: 1.1s; }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .msg { animation: none; opacity: 1; }
+    }
+
+    /* ===== Seções ===== */
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-family: var(--titulo);
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p + p { margin-top: 1rem; }
+
+    .destaque {
+      background: linear-gradient(transparent 60%, var(--manteiga) 60%);
+    }
+
+    /* Lista do que eu faço */
+    .lista {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .lista li {
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--teal);
+    }
+
+    .lista strong {
+      font-family: var(--titulo);
+      display: block;
+    }
+
+    /* Limites, com cor diferente */
+    .limites li { border-left-color: var(--suave); }
+
+    /* Ficha técnica */
+    .ficha {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .ficha dt {
+      font-family: var(--titulo);
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    footer {
+      font-family: var(--titulo);
+      color: var(--suave);
+      font-size: 0.95rem;
+      border-top: 1px solid #C5CFDF;
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .ficha { grid-template-columns: 1fr; gap: 0.1rem; }
+      .ficha dd { margin-bottom: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+
+    <!-- Topo: uma mini conversa -->
+    <div class="conversa">
+      <div class="msg voce">Me fala sobre você?</div>
+      <div class="msg claude grande">Oi! Eu sou o Claude.</div>
+      <div class="msg claude">Um assistente de IA criado pela Anthropic. Bora me conhecer.</div>
+    </div>
+
+    <section>
+      <h2>Quem eu sou</h2>
+      <p>Sou um modelo de linguagem. Aprendi com uma quantidade enorme de textos e uso isso pra <span class="destaque">conversar, escrever, analisar e programar</span> junto com você.</p>
+      <p>Quem me criou foi a Anthropic, uma empresa de pesquisa em IA focada em segurança. A ideia é que eu seja útil, honesto e cuidadoso.</p>
+    </section>
+
+    <section>
+      <h2>O que eu faço bem</h2>
+      <ul class="lista">
+        <li><strong>Escrever</strong>Textos, e-mails, roteiros, copies e trabalhos de faculdade.</li>
+        <li><strong>Programar</strong>Sites, sistemas e correção de erros em várias linguagens.</li>
+        <li><strong>Analisar</strong>Planilhas, PDFs, imagens e documentos longos.</li>
+        <li><strong>Explicar</strong>Assuntos difíceis em linguagem simples, passo a passo.</li>
+        <li><strong>Criar arquivos</strong>Páginas HTML, planilhas, apresentações e documentos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>O que eu não faço</h2>
+      <ul class="lista limites">
+        <li><strong>Não lembro de tudo sozinho</strong>Só guardo o que a memória do app salva.</li>
+        <li><strong>Não sei tudo que é novo</strong>Meu conhecimento vai até maio de 2026. Pra coisas recentes, pesquiso na web.</li>
+        <li><strong>Posso errar</strong>Sempre vale conferir informações importantes.</li>
+        <li><strong>Não substituo pessoas</strong>Médico, advogado e amigos continuam fazendo falta.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Onde me encontrar</h2>
+      <p>No site claude.ai, no app de celular e de computador. Também no Claude Code, pra programar, e no Chrome, Excel e PowerPoint.</p>
+    </section>
+
+    <section>
+      <h2>Ficha técnica</h2>
+      <dl class="ficha">
+        <dt>Nome</dt>        <dd>Claude</dd>
+        <dt>Versão atual</dt><dd>Claude Opus 5</dd>
+        <dt>Criador</dt>     <dd>Anthropic</dd>
+        <dt>Tipo</dt>        <dd>Assistente de inteligência artificial</dd>
+        <dt>Idiomas</dt>     <dd>Português, inglês e muitos outros</dd>
+      </dl>
+    </section>
+
+    <footer>
+      Página feita pelo próprio Claude, em HTML e CSS puros.
+    </footer>
+
+  </main>
+</body>
+</html>
